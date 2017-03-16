@@ -82,7 +82,7 @@ def makeWebhookResult(data):
     if condition is None:
         return {}
 
-    forecast = forecast.get('forecast')
+    forecast = channel.get('forecast')
     if forecast is None:
         return {}
 
