@@ -83,6 +83,10 @@ def makeWebhookResult(data):
     if condition is None:
         return {}
 
+    forecast = item.get('forecast')
+    if condition is None:
+        return {}
+
     # print(json.dumps(item, indent=4))
 
     city_requested = location.get('city')
