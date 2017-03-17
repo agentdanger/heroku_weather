@@ -95,11 +95,7 @@ def makeWebhookResult(data):
     high_temp_today = high_temp[0]
     low_temp_today = low_temp[0]
 
-    speech = """
-             Today in %s: It is %s.
-             It is currently %d%s.
-             The high is going to be %d%s, and the low will be %d%s.
-             """ % (city_requested, condition_requested, current_temp, units_speech, high_temp_today, units_speech, low_temp_today, units_speech)
+    speech = "Today in %s: It is %s. It is currently %d%s. The high is going to be %d%s, and the low will be %d%s." % (city_requested, condition_requested, current_temp, units_speech, high_temp_today, units_speech, low_temp_today, units_speech)
 
     print("Response:")
     print(speech)
