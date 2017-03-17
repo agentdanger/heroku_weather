@@ -89,8 +89,8 @@ def makeWebhookResult(data):
     condition_requested = condition.get('text')
     current_temp = condition.get('temp')
     units_speech = units.get('temperature')
-    high_temp = forecast.high()
-    low_temp = forecast.low()
+    high_temp = forecast_channel.high()
+    low_temp = forecast_channel.low()
 
     high_temp_today = high_temp[0]
     low_temp_today = low_temp[0]
