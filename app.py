@@ -92,7 +92,7 @@ def makeWebhookResult(data):
 
     speech = """
              Today in %s: It is %s.
-             The temperature is currently %d%s.
+             The temperature is currently %s %s.
              """ % (city_requested, condition_requested, current_temp, units_speech)
 
     print("Response:")
