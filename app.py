@@ -75,8 +75,7 @@ def makeWebhookResult(data):
     item = channel.get('item')
     location = channel.get('location')
     units = channel.get('units')
-    forecasts = channel.get('forecast')
-    if (location is None) or (item is None) or (units is None) or (forecasts is None):
+    if (location is None) or (item is None) or (units is None):
         return {}
 
     condition = item.get('condition')
@@ -91,15 +90,12 @@ def makeWebhookResult(data):
     units_speech = units.get('temperature')
     high_list = forecasts['high']
     low_list = forecasts['low']
-    high_temp_today = high_list[0]
-    low_temp_today = low_list[0]
 
 
     speech = """
              Today in %s: It is %s.
-             The temperature is currently %s %s.  The high will be %s %s.
-             The low will be %s %s.
-             """ % (city_requested, condition_requested, current_temp, units_speech, high_temp_today, units_speech, low_temp_today, units_speech)
+             The temperature is currently %s %s.
+             """ % (city_requested, condition_requested, current_temp, units_speech)
 
     print("Response:")
     print(speech)
